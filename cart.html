@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart | Ichigo Crumbs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- Decorative top ribbon -->
+  <div class="ribbon-top"></div>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="diary.html">Diary</a>
+      <a href="contact.html">Contact</a>
+      <a href="thankyou.html">Thanks</a>
+    </nav>
+  </header>
+
+ <main class="cart-container">
+  <h2>Your Cart 🧁</h2>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="cart-items">
+      <!-- JS will insert rows here -->
+    </tbody>
+  </table>
+
+  <div class="total-section">
+    Total: <span id="total">RM 0.00</span>
+  </div>
+
+  <div style="text-align: right;">
+    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+  </div>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Ichigo Crumbs | Made with love by abbyaddry 🍰</p>
+  </footer>
+
+<script>
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartTable = document.getElementById('cart-items');
+  const totalDisplay = document.getElementById('total');
+
+  function renderCart() {
+    cartTable.innerHTML = '';
+    let total = 0;
+
+    if (cartItems.length === 0) {
+      cartTable.innerHTML = '<tr><td colspan="3">Your cart is empty 🧺</td></tr>';
+      totalDisplay.textContent = 'RM 0.00';
+      return;
+    }
+
+    cartItems.forEach((item, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>RM ${item.price.toFixed(2)}</td>
+        <td><button onclick="removeItem(${index})" class="remove-btn">Delete</button></td>
+      `;
+      cartTable.appendChild(row);
+      total += item.price;
+    });
+
+    totalDisplay.textContent = `RM ${total.toFixed(2)}`;
+  }
+
+  function removeItem(index) {
+    cartItems.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    renderCart();
+  }
+
+  function clearCart() {
+    localStorage.removeItem('cart');
+    cartItems = [];
+    renderCart();
+  }
+
+  renderCart();
+</script>
+
+</body>
+</html>

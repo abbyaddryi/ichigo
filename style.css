@@ -1,0 +1,539 @@
+/* ✨ Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;500&display=swap');
+
+/* 🌼 Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff9f9;
+  color: #333;
+}
+
+/* 🎀 Header */
+header {
+  background-color: #e6f2e6;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #dcedc8;
+}
+
+h1 {
+  color: #b30059;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 48px;
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #006633;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ff66b3;
+}
+
+/* 🎗️ Ribbon */
+.ribbon-top {
+  background: url('images/ribbon-top.png') no-repeat center top;
+  background-size: contain;
+  height: 80px;
+}
+
+/* 🍓 Hero Section */
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff0f5;
+}
+
+.hero h2 {
+  color: #d81b60;
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* 🖼️ Main Image */
+.main-image {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* 🧺 Gingham Box */
+.gingham-box {
+  background: url('images/gingham-bg.jpg');
+  background-size: contain;
+  padding: 30px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.gingham-box h3 {
+  font-size: 30px;
+  color: #00994d;
+}
+
+/* 🎥 Media Section */
+.media-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fce4ec;
+}
+
+.media-section video {
+  width: 90%;                 /* Stretchs across most of the screen */
+  max-width: 1000px;          /* But doesn’t go too wide on big screens */
+  height: auto;
+  display: block;
+  margin: 30px auto;          /* Centers the video */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Optional: Soft shadow */
+}
+
+/* 📣 CTA Box */
+.cta-box {
+  background-color: #e8f5e9;
+  text-align: center;
+  padding: 30px;
+  margin: 40px 0;
+}
+
+.cta-box a {
+  color: #c2185b;
+  font-weight: bold;
+}
+
+/* 🍰 Menu Section */
+.menu-intro {
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 30px;
+}
+
+.menu-intro h2,
+.diary h2,
+.contact h2,
+.thankyou h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #b30059;
+  font-size: 32px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  color: #00994d;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-item p {
+  color: #c2185b;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 📖 About Section */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff8f8;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #b30059;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 📸 Diary / Gallery Section */
+.diary {
+  padding: 40px;
+  text-align: center;
+  background: #fff0f5;
+}
+
+.menu-intro h2,
+.diary h2,
+.contact h2,
+.thankyou h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #b30059;
+  font-size: 32px;
+}
+
+.diary p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.diary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(203, 139, 167, 0.25);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #c2185b;
+}
+
+/* 📞 Contact Section */
+.contact {
+  padding: 50px;
+  background: #e8fff1;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #b30059;
+}
+
+.contact form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact button {
+  background-color: #a5d6a7;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background-color: #81c784;
+}
+
+/* 🎉 Thank You Section */
+.thankyou {
+  background: #fdf6f9;
+  text-align: center;
+  padding: 60px;
+}
+
+.thankyou h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #b30059;
+}
+
+.thankyou p {
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-back {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background-color: #f8bbd0;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.button-back:hover {
+  background-color: #f06292;
+}
+
+/* 🦶 Footer */
+footer {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  position: relative;
+}
+
+.corner-ribbon {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  width: 80px;
+}
+.caption-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: #d81b60;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.5;
+}
+.caption-pink {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: #d81b60;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 700px;
+  line-height: 1.6;
+}
+.top-banner {
+  background: url('images/ribbon-top.jpg') no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  height: 50px; /* You can increase this if the banner looks squished */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.add-to-cart {
+  background-color: #ffcce0;
+  border: none;
+  color: #b30059;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #ff99c2;
+  color: white;
+}
+.floating-cart {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffccda;
+  color: #b30059;
+  font-size: 26px;
+  padding: 14px 20px;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+.floating-cart:hover {
+  background-color: #f48fb1;
+  transform: scale(1.1);
+}
+.remove-btn {
+  background-color: #fce4ec;
+  color: #c2185b;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #f8bbd0;
+}
+.cart-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f3cde9;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cart-table th {
+  background-color: #ffe6f0;
+  color: #b30059;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-table td {
+  background-color: #fff9fb;
+  font-size: 15px;
+}
+
+.remove-btn {
+  background-color: #f8bbd0;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #ec407a;
+}
+
+.total-section {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #b30059;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clear-cart-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #dcedc8;
+  color: #33691e;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clear-cart-btn:hover {
+  background-color: #c5e1a5;
+}
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff0f5;
+  border: 2px solid #ffccde;
+  border-radius: 20px;
+  padding: 12px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  color: #b30059;
+  text-align: center;
+}
+
+.music-player p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.music-player audio {
+  width: 200px;
+}

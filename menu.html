@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Menu | Ichigo Crumbs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ribbon-top"></div>
+
+  <header>
+    <h1>Our Menu</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="diary.html">Diary</a>
+      <a href="contact.html">Contact</a>
+      <a href="thankyou.html">Thanks</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-intro">
+      <h2>Desserts Made to Delight 🍰</h2>
+      <p class="caption-pink">Explore our sweet creations, all handmade with love and top tier ingredients.</p>
+    </section>
+
+    <section class="menu-grid">
+      <div class="menu-item">
+        <img src="images/tiramisu.jpg" alt="Tiramisu">
+        <h3>Tira-Miss-U</h3>
+        <p>RM18.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/pavlova.jpg" alt="Pavlova">
+        <h3>Pav-Lover</h3>
+        <p>RM22.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/cake.jpg" alt="Bento Cakes">
+        <h3>Bento Cakes</h3>
+        <p>RM15.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/cookies.jpg" alt="Soft Cookies">
+        <h3>Soft Cookies</h3>
+        <p>RM6.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/cinnamon.jpg" alt="Cinnamon Rolls">
+        <h3>Cinnamon Rolls</h3>
+        <p>RM10.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/cheese.jpg" alt="Matcha Cheese Cakes">
+        <h3>Matcha Cheese Cakes</h3>
+        <p>RM15.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/macaron.jpg" alt="Macarons">
+        <h3>Macarons</h3>
+        <p>RM7.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/mochi.jpg" alt="Sweet Mochi">
+        <h3>Sweet Mochi</h3>
+        <p>RM5.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/cup.jpg" alt="Cupcakes">
+        <h3>Cupcakes</h3>
+        <p>RM8.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/pudding.jpg" alt="Caramel Puddings">
+        <h3>Caramel Puddings</h3>
+        <p>RM5.00</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ichigo Crumbs | Made with love by abbyaddry 🍰</p>
+  </footer>
+
+  <script>
+    // Get the cart from localStorage or initialize an empty array
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Select all menu items and attach event listeners to Add to Cart buttons
+    document.querySelectorAll('.menu-item').forEach(item => {
+      item.querySelector('.add-to-cart').addEventListener('click', () => {
+        const name = item.querySelector('h3').textContent;
+        const priceText = item.querySelector('p').textContent;
+        const price = parseFloat(priceText.replace('RM', ''));
+
+        // Add item to cart array
+        cart.push({ name, price });
+
+        // Save cart to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Give user feedback
+        alert(`${name} added to your cart! 🛒`);
+      });
+    });
+  </script>
+  <a href="cart.html" class="floating-cart">🛒</a>
+</body>
+</html>
